@@ -1,7 +1,68 @@
-<h1>Eventos do Component</h1>
+<h2>Eventos</h2>
+<hr />
 
-<div *ngFor="let evento of eventos">
-  <p><b>Tema:</b>{{ evento.tema }}</p>
-  <p><b>Local:</b>{{ evento.local }}</p>
-  <hr>
-</div>
+<form action="" class="container">
+  <div class="row mb-2">
+    <label class="col col-auto mr-2 align-self-center">Filtro:</label>
+    <input
+      type="text"
+      class="col col-auto"
+      placeholder="Buscar"
+      name="filtroLista"
+      [(ngModel)]="filtroLista"
+    />
+  </div>
+</form>
+
+<table class="table table-striped">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">
+        <button
+          class="btn btn-outline-light btn-sm"
+          (click)="changeStatusImg()"
+        >
+          {{ !exibirImg ? "Exibir" : "Ocultar" }}
+        </button>
+      </th>
+      <th scope="col">#</th>
+      <th scope="col">Tema</th>
+      <th scope="col">Local</th>
+      <th scope="col">Data</th>
+      <th scope="col">Qtd Pessoas</th>
+      <th scope="col">lote</th>
+      <th scope="col">Opções</th>
+    </tr>
+  </thead>
+  <tbody *ngIf="eventos && eventos.length">
+    <tr *ngFor="let evento of eventosFiltrados">
+      <td>
+        <img
+          [collapse]="!exibirImg"
+          [isAnimated]="true"
+          src="/assets/{{ evento.imagemURL }}"
+          alt="{{ evento.tema }}"
+          [style.width.px]="larguraImg"
+          [style.margin.px]="margemImg"
+        />
+      </td>
+      <td>{{ evento.eventoId }}</td>
+      <td>{{ evento.tema }}</td>
+      <td>{{ evento.local }}</td>
+      <td>{{ evento.dataEvento }}</td>
+      <td>{{ evento.qtdPessoas }}</td>
+      <td>{{ evento.lote }}</td>
+      <td>
+        <button type="button" class="btn btn-primary btn-sm">Editar</button>
+        <button type="button" class="btn btn-danger btn-sm ms-2">Excluir</button>
+      </td>
+    </tr>
+  </tbody>
+  <tfoot *ngIf="!eventos.length">
+    <tr>
+      <td colspan="8" class="text-center">
+        <h4>Nenhum evento encontrado</h4>
+      </td>
+    </tr>
+  </tfoot>
+</table>
