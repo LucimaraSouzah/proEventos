@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+ <ItemGroup>
+    <ProjectReference Include="..\ProEventos.Domain\ProEventos.Domain.csproj" />
+  </ItemGroup>
+
+ <ItemGroup>
+   <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.1" />
+ </ItemGroup>
+
+</Project>

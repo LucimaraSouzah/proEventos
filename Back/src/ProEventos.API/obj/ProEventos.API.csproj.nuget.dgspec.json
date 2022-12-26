@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Documentos\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.API\\ProEventos.API.csproj": {}
+    "D:\\Documentos\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.API\\ProEventos.API.csproj": {}
   },
   "projects": {
-    "E:\\Documentos\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.API\\ProEventos.API.csproj": {
+    "D:\\Documentos\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.API\\ProEventos.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Documentos\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.API\\ProEventos.API.csproj",
+        "projectUniqueName": "D:\\Documentos\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.API\\ProEventos.API.csproj",
         "projectName": "ProEventos.API",
-        "projectPath": "E:\\Documentos\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.API\\ProEventos.API.csproj",
-        "packagesPath": "C:\\Users\\lucim\\.nuget\\packages\\",
-        "outputPath": "E:\\Documentos\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.API\\obj\\",
+        "projectPath": "D:\\Documentos\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.API\\ProEventos.API.csproj",
+        "packagesPath": "C:\\Users\\Lucimara\\.nuget\\packages\\",
+        "outputPath": "D:\\Documentos\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\lucim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lucimara\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -27,7 +27,11 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\Documentos\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Application\\ProEventos.Application.csproj": {
+                "projectPath": "D:\\Documentos\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Application\\ProEventos.Application.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -40,6 +44,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.0, )"
@@ -88,7 +96,193 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Documentos\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Application\\ProEventos.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Documentos\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Application\\ProEventos.Application.csproj",
+        "projectName": "ProEventos.Application",
+        "projectPath": "D:\\Documentos\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Application\\ProEventos.Application.csproj",
+        "packagesPath": "C:\\Users\\Lucimara\\.nuget\\packages\\",
+        "outputPath": "D:\\Documentos\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Lucimara\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\Documentos\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {
+                "projectPath": "D:\\Documentos\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj"
+              },
+              "D:\\Documentos\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj": {
+                "projectPath": "D:\\Documentos\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Documentos\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Documentos\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj",
+        "projectName": "ProEventos.Domain",
+        "projectPath": "D:\\Documentos\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj",
+        "packagesPath": "C:\\Users\\Lucimara\\.nuget\\packages\\",
+        "outputPath": "D:\\Documentos\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Lucimara\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Documentos\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Documentos\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj",
+        "projectName": "ProEventos.Persistence",
+        "projectPath": "D:\\Documentos\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj",
+        "packagesPath": "C:\\Users\\Lucimara\\.nuget\\packages\\",
+        "outputPath": "D:\\Documentos\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Persistence\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Lucimara\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\Documentos\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {
+                "projectPath": "D:\\Documentos\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
