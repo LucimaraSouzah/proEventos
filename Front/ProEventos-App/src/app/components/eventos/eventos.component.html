@@ -1,12 +1,10 @@
-<h2>Eventos</h2>
-<hr />
-
+<app-titulo [titulo]="'Eventos'"></app-titulo>
 <form action="" class="container">
-  <div class="row mb-2">
-    <label class="col col-auto mr-2 align-self-center">Filtro:</label>
+  <div class="row mb-2 flex align-items-center">
+    <label class="mr-2">Filtro:</label>
     <input
       type="text"
-      class="col col-auto"
+      class="form-control col-3"
       placeholder="Buscar"
       name="filtroLista"
       [(ngModel)]="filtroLista"

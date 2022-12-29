@@ -1,7 +1,11 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
+
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
-import { IEvento } from '../models/IEvento';
-import { EventoService } from '../services/evento.service';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { ToastrService } from 'ngx-toastr';
+
+import { IEvento } from '../../models/IEvento';
+import { EventoService } from '../../services/evento.service';
 
 @Component({
   selector: 'app-eventos',
@@ -42,11 +46,19 @@ export class EventosComponent implements OnInit {
 
   constructor(
     private eventoService: EventoService,
-    private modalService: BsModalService
+    private modalService: BsModalService,
+    private toastr: ToastrService,
+    private spinner: NgxSpinnerService
   ) {}
 
   public ngOnInit(): void {
     this.getEventos();
+
+    this.spinner.show();
+
+    setTimeout(() => {
+      this.spinner.hide();
+    }, 5000);
   }
 
   public alterarImg() {
@@ -54,12 +66,18 @@ export class EventosComponent implements OnInit {
   }
 
   public getEventos(): void {
-    this.eventoService.getEventos().subscribe(
-      (eventos: IEvento[]) => {
+    this.eventoService.getEventos().subscribe({
+      next: (eventos: IEvento[]) => {
         (this.eventos = eventos), (this.eventosFiltrados = eventos);
       },
-      (error) => console.log(error)
-    );
+      error: (error: any) => {
+        this.spinner.hide();
+        this.toastr.error("Erro ao carregar os eventos");
+      },
+      complete: () => {
+        this.spinner.hide();
+      },
+    });
   }
 
   openModal(template: TemplateRef<any>): void {
@@ -68,6 +86,7 @@ export class EventosComponent implements OnInit {
 
   confirm(): void {
     this.modalRef?.hide();
+    this.toastr.success('Deletado com sucesso!');
   }
 
   decline(): void {
