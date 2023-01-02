@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/cvlPjObF2oz7IKlzhd8sWY3tHMxV0zJjzP5Lm9MPoTzi9aVfcOqdgJPDyIDMsBw2+RfGz6Qn5W7KZBCewTWEg==",
+  "dgSpecHash": "K93ZrfWxGaYsHtO0PYEjy1r9arNtJ1wu6nyDeGFJYaJGn2TuzMOjCFLHIoYPCb9qCQF/+y8CUetkmjFSuQ6ieA==",
   "success": true,
-  "projectFilePath": "D:\\Documentos\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.API\\ProEventos.API.csproj",
+  "projectFilePath": "D:\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.API\\ProEventos.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lucimara\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Lucimara\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\7.0.1\\microsoft.aspnetcore.jsonpatch.7.0.1.nupkg.sha512",

@@ -2036,11 +2036,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Documentos\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.API\\ProEventos.API.csproj",
+      "projectUniqueName": "D:\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.API\\ProEventos.API.csproj",
       "projectName": "ProEventos.API",
-      "projectPath": "D:\\Documentos\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.API\\ProEventos.API.csproj",
+      "projectPath": "D:\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.API\\ProEventos.API.csproj",
       "packagesPath": "C:\\Users\\Lucimara\\.nuget\\packages\\",
-      "outputPath": "D:\\Documentos\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.API\\obj\\",
+      "outputPath": "D:\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Lucimara\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2057,8 +2057,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\Documentos\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Application\\ProEventos.Application.csproj": {
-              "projectPath": "D:\\Documentos\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Application\\ProEventos.Application.csproj"
+            "D:\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Application\\ProEventos.Application.csproj": {
+              "projectPath": "D:\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Application\\ProEventos.Application.csproj"
             }
           }
         }
