@@ -2031,19 +2031,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Lucimara\\.nuget\\packages\\": {}
+    "C:\\Users\\l.de.souza.assis\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.API\\ProEventos.API.csproj",
+      "projectUniqueName": "C:\\Users\\l.de.souza.assis\\Desktop\\Estudos\\proEventos\\Back\\src\\ProEventos.API\\ProEventos.API.csproj",
       "projectName": "ProEventos.API",
-      "projectPath": "D:\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.API\\ProEventos.API.csproj",
-      "packagesPath": "C:\\Users\\Lucimara\\.nuget\\packages\\",
-      "outputPath": "D:\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.API\\obj\\",
+      "projectPath": "C:\\Users\\l.de.souza.assis\\Desktop\\Estudos\\proEventos\\Back\\src\\ProEventos.API\\ProEventos.API.csproj",
+      "packagesPath": "C:\\Users\\l.de.souza.assis\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\l.de.souza.assis\\Desktop\\Estudos\\proEventos\\Back\\src\\ProEventos.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Lucimara\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\l.de.souza.assis\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2051,14 +2051,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://pkgs.dev.azure.com/hiae/_packaging/cross-org%40Local/nuget/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Application\\ProEventos.Application.csproj": {
-              "projectPath": "D:\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Application\\ProEventos.Application.csproj"
+            "C:\\Users\\l.de.souza.assis\\Desktop\\Estudos\\proEventos\\Back\\src\\ProEventos.Application\\ProEventos.Application.csproj": {
+              "projectPath": "C:\\Users\\l.de.souza.assis\\Desktop\\Estudos\\proEventos\\Back\\src\\ProEventos.Application\\ProEventos.Application.csproj"
             }
           }
         }

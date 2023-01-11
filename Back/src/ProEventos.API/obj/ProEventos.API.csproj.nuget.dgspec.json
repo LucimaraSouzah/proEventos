@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.API\\ProEventos.API.csproj": {}
+    "C:\\Users\\l.de.souza.assis\\Desktop\\Estudos\\proEventos\\Back\\src\\ProEventos.API\\ProEventos.API.csproj": {}
   },
   "projects": {
-    "D:\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.API\\ProEventos.API.csproj": {
+    "C:\\Users\\l.de.souza.assis\\Desktop\\Estudos\\proEventos\\Back\\src\\ProEventos.API\\ProEventos.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.API\\ProEventos.API.csproj",
+        "projectUniqueName": "C:\\Users\\l.de.souza.assis\\Desktop\\Estudos\\proEventos\\Back\\src\\ProEventos.API\\ProEventos.API.csproj",
         "projectName": "ProEventos.API",
-        "projectPath": "D:\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.API\\ProEventos.API.csproj",
-        "packagesPath": "C:\\Users\\Lucimara\\.nuget\\packages\\",
-        "outputPath": "D:\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.API\\obj\\",
+        "projectPath": "C:\\Users\\l.de.souza.assis\\Desktop\\Estudos\\proEventos\\Back\\src\\ProEventos.API\\ProEventos.API.csproj",
+        "packagesPath": "C:\\Users\\l.de.souza.assis\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\l.de.souza.assis\\Desktop\\Estudos\\proEventos\\Back\\src\\ProEventos.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Lucimara\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\l.de.souza.assis\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,14 +22,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/hiae/_packaging/cross-org%40Local/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Application\\ProEventos.Application.csproj": {
-                "projectPath": "D:\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Application\\ProEventos.Application.csproj"
+              "C:\\Users\\l.de.souza.assis\\Desktop\\Estudos\\proEventos\\Back\\src\\ProEventos.Application\\ProEventos.Application.csproj": {
+                "projectPath": "C:\\Users\\l.de.souza.assis\\Desktop\\Estudos\\proEventos\\Back\\src\\ProEventos.Application\\ProEventos.Application.csproj"
               }
             }
           }
@@ -100,17 +101,17 @@
         }
       }
     },
-    "D:\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Application\\ProEventos.Application.csproj": {
+    "C:\\Users\\l.de.souza.assis\\Desktop\\Estudos\\proEventos\\Back\\src\\ProEventos.Application\\ProEventos.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Application\\ProEventos.Application.csproj",
+        "projectUniqueName": "C:\\Users\\l.de.souza.assis\\Desktop\\Estudos\\proEventos\\Back\\src\\ProEventos.Application\\ProEventos.Application.csproj",
         "projectName": "ProEventos.Application",
-        "projectPath": "D:\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Application\\ProEventos.Application.csproj",
-        "packagesPath": "C:\\Users\\Lucimara\\.nuget\\packages\\",
-        "outputPath": "D:\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Application\\obj\\",
+        "projectPath": "C:\\Users\\l.de.souza.assis\\Desktop\\Estudos\\proEventos\\Back\\src\\ProEventos.Application\\ProEventos.Application.csproj",
+        "packagesPath": "C:\\Users\\l.de.souza.assis\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\l.de.souza.assis\\Desktop\\Estudos\\proEventos\\Back\\src\\ProEventos.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Lucimara\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\l.de.souza.assis\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -118,17 +119,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/hiae/_packaging/cross-org%40Local/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {
-                "projectPath": "D:\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj"
+              "C:\\Users\\l.de.souza.assis\\Desktop\\Estudos\\proEventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {
+                "projectPath": "C:\\Users\\l.de.souza.assis\\Desktop\\Estudos\\proEventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj"
               },
-              "D:\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj": {
-                "projectPath": "D:\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj"
+              "C:\\Users\\l.de.souza.assis\\Desktop\\Estudos\\proEventos\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj": {
+                "projectPath": "C:\\Users\\l.de.souza.assis\\Desktop\\Estudos\\proEventos\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj"
               }
             }
           }
@@ -162,17 +164,17 @@
         }
       }
     },
-    "D:\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {
+    "C:\\Users\\l.de.souza.assis\\Desktop\\Estudos\\proEventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\l.de.souza.assis\\Desktop\\Estudos\\proEventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj",
         "projectName": "ProEventos.Domain",
-        "projectPath": "D:\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj",
-        "packagesPath": "C:\\Users\\Lucimara\\.nuget\\packages\\",
-        "outputPath": "D:\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Domain\\obj\\",
+        "projectPath": "C:\\Users\\l.de.souza.assis\\Desktop\\Estudos\\proEventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj",
+        "packagesPath": "C:\\Users\\l.de.souza.assis\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\l.de.souza.assis\\Desktop\\Estudos\\proEventos\\Back\\src\\ProEventos.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Lucimara\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\l.de.souza.assis\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -180,7 +182,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/hiae/_packaging/cross-org%40Local/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
@@ -217,17 +220,17 @@
         }
       }
     },
-    "D:\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj": {
+    "C:\\Users\\l.de.souza.assis\\Desktop\\Estudos\\proEventos\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\l.de.souza.assis\\Desktop\\Estudos\\proEventos\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj",
         "projectName": "ProEventos.Persistence",
-        "projectPath": "D:\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj",
-        "packagesPath": "C:\\Users\\Lucimara\\.nuget\\packages\\",
-        "outputPath": "D:\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Persistence\\obj\\",
+        "projectPath": "C:\\Users\\l.de.souza.assis\\Desktop\\Estudos\\proEventos\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj",
+        "packagesPath": "C:\\Users\\l.de.souza.assis\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\l.de.souza.assis\\Desktop\\Estudos\\proEventos\\Back\\src\\ProEventos.Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Lucimara\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\l.de.souza.assis\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -235,14 +238,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/hiae/_packaging/cross-org%40Local/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {
-                "projectPath": "D:\\Dev\\Estudos\\.Net\\ProEventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj"
+              "C:\\Users\\l.de.souza.assis\\Desktop\\Estudos\\proEventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {
+                "projectPath": "C:\\Users\\l.de.souza.assis\\Desktop\\Estudos\\proEventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj"
               }
             }
           }
