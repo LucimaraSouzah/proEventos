@@ -6,6 +6,7 @@ using ProEventos.Application.Contratos;
 using ProEventos.Persistence;
 using ProEventos.Persistence.Contextos;
 using ProEventos.Persistence.Contratos;
+using AutoMapper;
 
 namespace ProEventos.API
 {
@@ -22,15 +23,22 @@ namespace ProEventos.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ProEventosContext>(context => context.UseSqlite(Configuration.GetConnectionString("Default")));
+            
             services.AddControllers()
-                    .AddNewtonsoftJson(x => x.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+                   .AddJsonOptions(options =>
+                       options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter())
+                   )
+                   .AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling =
+                       Newtonsoft.Json.ReferenceLoopHandling.Ignore
+                   );
+
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
             services.AddScoped<IEventoService, EventoService>();
             services.AddScoped<IGeralPersist, GeralPersist>();
             services.AddScoped<IEventoPersist, EventoPersist>();
-            services.AddControllers().AddJsonOptions(j => 
-		{
-			j.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
-		});
+
+
             services.AddCors();
             services.AddSwaggerGen(c =>
             {
@@ -55,7 +63,7 @@ namespace ProEventos.API
             app.UseAuthorization();
 
             app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
-            
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
