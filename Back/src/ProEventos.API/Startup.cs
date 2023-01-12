@@ -38,7 +38,6 @@ namespace ProEventos.API
             services.AddScoped<IGeralPersist, GeralPersist>();
             services.AddScoped<IEventoPersist, EventoPersist>();
 
-
             services.AddCors();
             services.AddSwaggerGen(c =>
             {
