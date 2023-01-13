@@ -8,9 +8,11 @@ namespace ProEventos.Application.Dtos
         public string Local { get; set; }
         public string DataEvento { get; set; }
 
+
         [Required(ErrorMessage = "O campo {0} é obrigatório")]
         [StringLength(50, MinimumLength = 3, ErrorMessage = "O campo {0} deve ter entre {2} e {1} caracteres")]
         public string Tema { get; set; }
+
 
         [Display(Name = "Qtd Pessoas")]
         [Range(1, 120000, ErrorMessage = "{0} não pode ser menor que 1 e maior que 120.000")]
@@ -19,9 +21,11 @@ namespace ProEventos.Application.Dtos
         [RegularExpression(@".*\.(gif|jpe?g|bmp|png)$", ErrorMessage = "Não é uma imagem válida. (gif, jpg, jpeg, bmp ou png)")]
         public string ImagemURL { get; set; }
 
+
         [Required(ErrorMessage = "O campo {0} é obrigatório")]
         [Phone(ErrorMessage = "O campo {0} está com número inválido")]
         public string Telefone { get; set; }
+
 
         [Required(ErrorMessage = "O campo {0} é obrigatório")]
         [Display(Name = "e-mail")]
