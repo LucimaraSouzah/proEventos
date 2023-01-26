@@ -35,7 +35,10 @@ namespace ProEventos.API
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             services.AddScoped<IEventoService, EventoService>();
+            services.AddScoped<ILoteService, LoteService>();
+            
             services.AddScoped<IGeralPersist, GeralPersist>();
+            services.AddScoped<ILotePersist, LotePersist>();
             services.AddScoped<IEventoPersist, EventoPersist>();
 
             services.AddCors();
