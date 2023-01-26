@@ -5,13 +5,8 @@
         <div class="input-group-prepend">
           <div class="input-group-text">Filtro:</div>
         </div>
-        <input
-          type="text"
-          class="form-control"
-          placeholder="Filtrar por Tema e Local"
-          name="filtroLista"
-          [(ngModel)]="filtroLista"
-        />
+        <input type="text" class="form-control" placeholder="Filtrar por Tema e Local" name="filtroLista"
+          [(ngModel)]="filtroLista" />
       </div>
     </div>
 
@@ -44,14 +39,8 @@
     <tbody *ngIf="eventos && eventos.length">
       <tr *ngFor="let evento of eventosFiltrados" (click)="detalheEvento(evento.id)" style="cursor:pointer">
         <td class="d-none d-md-table-cell">
-          <img
-            [collapse]="!exibirImg"
-            [isAnimated]="true"
-            src="/assets/{{ evento.imagemURL }}"
-            alt="{{ evento.tema }}"
-            [style.width.px]="larguraImg"
-            [style.margin.px]="margemImg"
-          />
+          <img [collapse]="!exibirImg" [isAnimated]="true" [src]="mostrarImagem(evento.imagemURL)"
+            [style.width.px]="larguraImg" [style.margin.px]="margemImg" />
         </td>
         <td>{{ evento.id }}</td>
         <td>{{ evento.tema }}</td>
@@ -62,13 +51,8 @@
           {{ evento.lotes[0]?.nome | uppercase }}
         </td>
         <td>
-          <button
-            type="button"
-            class="btn btn-danger btn-md"
-            data-toggle="tooltip"
-            title="Excluir"
-            (click)="openModal($event, template, evento.id)"
-          >
+          <button type="button" class="btn btn-danger btn-md" data-toggle="tooltip" title="Excluir"
+            (click)="openModal($event, template, evento.id)">
             <i class="fa fa-trash"></i>
           </button>
         </td>

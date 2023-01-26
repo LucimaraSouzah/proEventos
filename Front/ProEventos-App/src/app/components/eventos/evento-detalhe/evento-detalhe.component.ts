@@ -1,3 +1,4 @@
+import { environment } from './../../../../environments/environment';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { Component, OnInit, TemplateRef } from '@angular/core';
 import {
@@ -31,6 +32,8 @@ export class EventoDetalheComponent implements OnInit {
   form: FormGroup;
   estadoSalvar = 'post';
   loteAtual = { id: 0, nome: '', indice: 0 };
+  imagemURL = 'assets/img/semImagem.png';
+  file: File;
 
   get modoEditar(): boolean {
     return this.estadoSalvar === 'put';
@@ -91,6 +94,9 @@ export class EventoDetalheComponent implements OnInit {
             this.evento = { ...evento };
             this.form.patchValue(this.evento);
             // this.carregarLotes();
+            if(this.evento.imagemURL !== null && this.evento.imagemURL !== '') { 
+              this.imagemURL =  environment.apiURL + 'resources/images/' + this.evento.imagemURL;
+            }
             this.evento.lotes.forEach((lote) => {
               this.lotes.push(this.criarLote(lote));
             });
@@ -146,7 +152,7 @@ export class EventoDetalheComponent implements OnInit {
         ],
       ],
       qtdPessoas: ['', [Validators.required, Validators.max(120000)]],
-      imagemURL: ['', Validators.required],
+      imagemURL: [''],
       telefone: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       lotes: this.fb.array([]),
@@ -168,14 +174,13 @@ export class EventoDetalheComponent implements OnInit {
     });
   }
 
-  public mudarValorData(value: Date, indice: number, campo:string): void {
+  public mudarValorData(value: Date, indice: number, campo: string): void {
     this.lotes.value[indice][campo] = value;
   }
 
   public retornaTituloLote(nome: string): string {
     return nome === null || nome === '' ? 'Novo Lote' : nome;
   }
-
 
   public resetForm(): void {
     this.form.reset();
@@ -258,5 +263,34 @@ export class EventoDetalheComponent implements OnInit {
 
   declineDeleteLote(): void {
     this.modalRef.hide();
+  }
+
+  onFileChange(ev: any): void {
+    const reader = new FileReader();
+
+    reader.onload = (event: any) => (this.imagemURL = event.target.result);
+
+    this.file = ev.target.files;
+    reader.readAsDataURL(this.file[0]);
+
+    this.uploadImagem();
+  }
+
+  uploadImagem(): void {
+    this.spinner.show();
+
+    this.eventoService
+      .postUpload(this.eventoId, this.file)
+      .subscribe(
+        () => {
+          this.carregarEvento();
+          this.toastr.success('Imagem atualizada com sucesso!');
+        },
+        (error: any) => {
+          this.toastr.error(`Erro ao atualizar imagem`);
+          console.error(error);
+        }
+      )
+      .add(() => this.spinner.hide());
   }
 }
