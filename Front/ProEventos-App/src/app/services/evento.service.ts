@@ -1,5 +1,5 @@
 import { environment } from './../../environments/environment';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IEvento } from '../models/IEvento';
@@ -9,10 +9,13 @@ import { take } from 'rxjs/operators';
 //{ providedIn : 'root' }
 export class EventoService {
   baseUrl = environment.apiURL + 'api/eventos';
+  
   constructor(private http: HttpClient) {}
-
+  
   public getEventos(): Observable<IEvento[]> {
-    return this.http.get<IEvento[]>(this.baseUrl).pipe(take(1));
+    return this.http
+      .get<IEvento[]>(this.baseUrl)
+      .pipe(take(1));
   }
 
   public getEventosByTema(tema: string): Observable<IEvento[]> {
