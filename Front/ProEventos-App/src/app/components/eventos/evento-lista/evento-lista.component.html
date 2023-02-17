@@ -5,8 +5,13 @@
         <div class="input-group-prepend">
           <div class="input-group-text">Filtro:</div>
         </div>
-        <input type="text" class="form-control" placeholder="Filtrar por Tema e Local" name="filtroLista"
-          [(ngModel)]="filtroLista" />
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Filtrar por Tema e Local"
+          name="filtroLista"
+          (input)="filtrarEventos($event.target)"
+        />
       </div>
     </div>
 
@@ -37,10 +42,19 @@
       </tr>
     </thead>
     <tbody *ngIf="eventos && eventos.length">
-      <tr *ngFor="let evento of eventosFiltrados" (click)="detalheEvento(evento.id)" style="cursor:pointer">
+      <tr
+        *ngFor="let evento of eventos"
+        (click)="detalheEvento(evento.id)"
+        style="cursor: pointer"
+      >
         <td class="d-none d-md-table-cell">
-          <img [collapse]="!exibirImg" [isAnimated]="true" [src]="mostrarImagem(evento.imagemURL)"
-            [style.width.px]="larguraImg" [style.margin.px]="margemImg" />
+          <img
+            [collapse]="!exibirImg"
+            [isAnimated]="true"
+            [src]="mostrarImagem(evento.imagemURL)"
+            [style.width.px]="larguraImg"
+            [style.margin.px]="margemImg"
+          />
         </td>
         <td>{{ evento.id }}</td>
         <td>{{ evento.tema }}</td>
@@ -51,8 +65,13 @@
           {{ evento.lotes[0]?.nome | uppercase }}
         </td>
         <td>
-          <button type="button" class="btn btn-danger btn-md" data-toggle="tooltip" title="Excluir"
-            (click)="openModal($event, template, evento.id)">
+          <button
+            type="button"
+            class="btn btn-danger btn-md"
+            data-toggle="tooltip"
+            title="Excluir"
+            (click)="openModal($event, template, evento.id)"
+          >
             <i class="fa fa-trash"></i>
           </button>
         </td>
@@ -66,11 +85,27 @@
       </tr>
     </tfoot>
   </table>
+
+  <div class="d-flex justify-content-center">
+    <pagination
+      [boundaryLinks]="true"
+      [totalItems]="pagination.totalItems"
+      [itemsPerPage]="pagination.itemsPerPage"
+      [(ngModel)]="pagination.currentPage"
+      (pageChanged)="pageChanged($event)"
+      pageBtnClass="btn"
+      previousText="&lsaquo;"
+      nextText="&rsaquo;"
+      firstText="&laquo;"
+      lastText="&raquo;"
+    >
+    </pagination>
+  </div>
 </div>
 
 <ng-template #template>
   <div class="modal-body text-center">
-    <p>Tem certeza que quer deletar o evento de código {{this.eventoId}}?</p>
+    <p>Tem certeza que quer deletar o evento de código {{ this.eventoId }}?</p>
     <button type="button" class="btn btn-default" (click)="confirm()">
       Sim
     </button>

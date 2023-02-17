@@ -1,27 +1,52 @@
 import { environment } from './../../environments/environment';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IEvento } from '../models/IEvento';
-import { take } from 'rxjs/operators';
+import { map, take } from 'rxjs/operators';
+import { PaginatedResult } from '@app/models/Pagination';
 
 @Injectable()
 //{ providedIn : 'root' }
 export class EventoService {
   baseUrl = environment.apiURL + 'api/eventos';
-  
-  constructor(private http: HttpClient) {}
-  
-  public getEventos(): Observable<IEvento[]> {
-    return this.http
-      .get<IEvento[]>(this.baseUrl)
-      .pipe(take(1));
-  }
 
-  public getEventosByTema(tema: string): Observable<IEvento[]> {
+  constructor(private http: HttpClient) {}
+
+  public getEventos(
+    page?: number,
+    itemsPerPage?: number,
+    term?: string
+  ): Observable<PaginatedResult<IEvento[]>> {
+    const paginatedResult: PaginatedResult<IEvento[]> = new PaginatedResult<
+      IEvento[]
+    >();
+
+    let params = new HttpParams();
+
+    if (page != null && itemsPerPage != null) {
+      params = params.append('pageNumber', page.toString());
+      params = params.append('pageSize', itemsPerPage.toString());
+    }
+
+    if (term != null && term != '') {
+      params = params.append('term', term);
+    }
+
     return this.http
-      .get<IEvento[]>(`${this.baseUrl}/${tema}/tema`)
-      .pipe(take(1));
+      .get<IEvento[]>(this.baseUrl, { observe: 'response', params })
+      .pipe(
+        take(1),
+        map((response) => {
+          paginatedResult.result = response.body;
+          if (response.headers.has('Pagination')) {
+            paginatedResult.pagination = JSON.parse(
+              response.headers.get('Pagination')
+            );
+          }
+          return paginatedResult;
+        })
+      );
   }
 
   public getEventoById(id: number): Observable<IEvento> {

@@ -8,6 +8,7 @@ import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { PaginationModule } from 'ngx-bootstrap/pagination';
 
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { defineLocale, ptBrLocale } from 'ngx-bootstrap/chronos';
@@ -71,6 +72,7 @@ defineLocale('pt-br', ptBrLocale);
     TooltipModule.forRoot(),
     BsDropdownModule.forRoot(),
     BsDatepickerModule.forRoot(),
+    PaginationModule.forRoot(),
     ModalModule.forRoot(),
     ToastrModule.forRoot({
       timeOut: 3000,
@@ -82,7 +84,12 @@ defineLocale('pt-br', ptBrLocale);
     NgxSpinnerModule,
     NgxCurrencyModule,
   ],
-  providers: [AccountService, EventoService, LoteService,{ provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }],
+  providers: [
+    AccountService,
+    EventoService,
+    LoteService,
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
