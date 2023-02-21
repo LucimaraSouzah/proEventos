@@ -17,7 +17,7 @@ namespace ProEventos.API.Controllers
 
         private readonly IUtil _util;
 
-        private readonly string _destino = "Images";
+        private readonly string _destino = "Perfil";
 
         public AccountController(IAccountService accountService, ITokenService tokenService, IUtil util)
         {
@@ -135,7 +135,7 @@ namespace ProEventos.API.Controllers
 
                 var userRetorno = await _accountService.UpdateAccount(user);
 
-                return Ok(user);
+                return Ok(userRetorno);
             }
             catch (Exception ex)
             {

@@ -141,7 +141,7 @@ namespace ProEventos.Application
 
                         model.EventoId = eventoId;
 
-                        _mapper.Map(model, redeSocials);
+                        _mapper.Map(model, RedeSocial);
 
                         _redeSocialPersist.Update<RedeSocial>(RedeSocial);
 
@@ -179,7 +179,7 @@ namespace ProEventos.Application
 
                         model.PalestranteId = palestranteId;
 
-                        _mapper.Map(model, redeSocials);
+                        _mapper.Map(model, RedeSocial);
 
                         _redeSocialPersist.Update<RedeSocial>(RedeSocial);
 

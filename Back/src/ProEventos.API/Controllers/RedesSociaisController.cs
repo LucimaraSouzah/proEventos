@@ -44,14 +44,14 @@ public class RedesSociaisController : ControllerBase
     }
 
     [HttpGet("palestrante")]
-    public async Task<IActionResult> GetByPalestrante(int palestranteId)
+    public async Task<IActionResult> GetByPalestrante()
     {
         try
         {
             var palestrante = await _palestranteService.GetPalestranteByUserIdAsync(User.GetUserId());
             if (palestrante == null) return Unauthorized();
 
-            var redeSocial = await _redeSocialService.GetAllByPalestranteIdAsync(palestranteId);
+            var redeSocial = await _redeSocialService.GetAllByPalestranteIdAsync(palestrante.Id);
             if (redeSocial == null) return NoContent();
 
             return Ok(redeSocial);
@@ -85,14 +85,14 @@ public class RedesSociaisController : ControllerBase
     }
 
     [HttpPut("palestrante")]
-    public async Task<IActionResult> SaveByPalestrante(int palestranteId, RedeSocialDto[] models)
+    public async Task<IActionResult> SaveByPalestrante(RedeSocialDto[] models)
     {
         try
         {
             var palestrante = await _palestranteService.GetPalestranteByUserIdAsync(User.GetUserId());
             if (palestrante == null) return Unauthorized();
 
-            var redeSocial = await _redeSocialService.SaveByPalestrante(palestranteId, models);
+            var redeSocial = await _redeSocialService.SaveByPalestrante(palestrante.Id, models);
             if (redeSocial == null) return NoContent();
 
             return Ok(redeSocial);

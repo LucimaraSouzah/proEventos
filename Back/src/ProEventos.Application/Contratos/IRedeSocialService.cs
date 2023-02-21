@@ -6,7 +6,7 @@ namespace ProEventos.Application.Contratos
     {
         Task<RedeSocialDto[]> SaveByEvento(int eventoId, RedeSocialDto[] models);
 
-        Task<bool> DeleteByEvento(int id, int redeSocialId);
+        Task<bool> DeleteByEvento(int eventoId, int redeSocialId);
 
         Task<RedeSocialDto[]> SaveByPalestrante(int palestranteId, RedeSocialDto[] models);
 

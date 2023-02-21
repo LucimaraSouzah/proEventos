@@ -81,8 +81,8 @@ public class PalestranteController : ControllerBase
         }
     }
 
-    [HttpPut("{id}")]
-    public async Task<IActionResult> Put(int id, PalestranteUpdateDto model)
+    [HttpPut]
+    public async Task<IActionResult> Put(PalestranteUpdateDto model)
     {
         try
         {
